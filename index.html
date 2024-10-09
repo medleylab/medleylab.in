@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medley Lab</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&family=League+Spartan&family=Montserrat&family=Poppins&family=Playfair+Display&family=Raleway&family=Open+Sans&display=swap" rel="stylesheet">
+    <style>
+        /* Color Palette */
+        :root {
+            --deep-red: #B03028;
+            --navy-blue: #1D2C59;
+            --yellow: #F4D03F;
+            --charcoal-black: #333333;
+            --dark-grey: #666666;
+            --light-grey: #E0E0E0;
+            --off-white: #F8F8F8;
+            --light-beige: #FFF6E5;
+        }
+
+        /* Global Styles */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Open Sans', sans-serif;
+            background-color: var(--off-white);
+            color: var(--dark-grey);
+            line-height: 1.6;
+        }
+
+        a {
+            color: var(--navy-blue);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: var(--yellow);
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            color: var(--charcoal-black);
+            margin: 0;
+            padding: 0.5em 0;
+        }
+
+        h1 {
+            font-family: 'League Spartan', sans-serif;
+            font-size: 2.5em;
+            letter-spacing: 2px;
+        }
+
+        h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2em;
+            margin-bottom: 0.5em;
+        }
+
+        h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.75em;
+            margin-bottom: 0.5em;
+        }
+
+        h4 {
+            font-family: 'Raleway', sans-serif;
+            font-size: 1.5em;
+            margin-bottom: 0.5em;
+            color: var(--deep-red);
+            cursor: pointer;
+        }
+
+        h5 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.25em;
+            margin-bottom: 0.5em;
+        }
+
+        h6 {
+            font-family: 'Josefin Sans', sans-serif;
+            font-size: 1em;
+            margin-bottom: 0.5em;
+        }
+
+        /* Header Tagline Section */
+        .header-tagline {
+            background-color: var(--light-beige);
+            padding: 2em 1em;
+            text-align: center;
+        }
+
+        /* Hero Section */
+        .hero-section {
+            background-color: var(--off-white);
+            padding: 2em 1em;
+            text-align: center;
+        }
+
+        .hero-section p {
+            max-width: 800px;
+            margin: 0 auto 1.5em auto;
+            color: var(--dark-grey);
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 0.75em 1.5em;
+            background-color: var(--deep-red);
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1em;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+            margin-bottom: 1em;
+        }
+
+        .cta-button:hover {
+            background-color: #a02624; /* Slightly darker than Deep Red */
+        }
+
+        /* Marquee of Brands Section */
+        .marquee-section {
+            background-color: var(--light-beige);
+            padding: 2em 1em;
+            overflow: hidden;
+        }
+
+        .marquee-section h2 {
+            text-align: center;
+            margin-bottom: 1em;
+        }
+
+        .marquee-content {
+            display: flex;
+            animation: marquee 20s linear infinite;
+        }
+
+        .marquee-content img {
+            height: 100px;
+            margin-right: 2em;
+            object-fit: contain;
+        }
+
+        /* Duplicate content for seamless marquee */
+        .marquee-content::after {
+            content: "";
+            flex: 0 0 auto;
+            width: 100%;
+        }
+
+        @keyframes marquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
+        /* Our Services Section */
+        .services-section {
+            background-color: var(--off-white);
+            padding: 2em 1em;
+        }
+
+        .services-section h2 {
+            text-align: center;
+            margin-bottom: 1em;
+        }
+
+        .service {
+            max-width: 800px;
+            margin: 0 auto 2em auto;
+            padding: 1em;
+            border: 1px solid var(--light-grey);
+            border-radius: 8px;
+            background-color: #fff;
+        }
+
+        .service-description {
+            margin: 1em 0;
+            color: var(--dark-grey);
+        }
+
+        /* Why Choose Medley Lab Section */
+        .why-section {
+            background-color: var(--light-beige);
+            padding: 2em 1em;
+            text-align: center;
+        }
+
+        .why-section p {
+            max-width: 800px;
+            margin: 0 auto 1.5em auto;
+            color: var(--dark-grey);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--charcoal-black);
+            color: #fff;
+            text-align: center;
+            padding: 1em 0;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .marquee-content img {
+                height: 70px;
+                margin-right: 1em;
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+
+            h2 {
+                font-size: 1.75em;
+            }
+
+            h3 {
+                font-size: 1.5em;
+            }
+
+            h4 {
+                font-size: 1.25em;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Header Tagline Section -->
+    <section class="header-tagline">
+        <h1>Compose Strategic Impact.</h1>
+    </section>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <h2>Looking for an agency that understands your brand and builds an impactful online presence? Medley Lab blends creativity with strategy to elevate your business.</h2>
+        <a href="#services" class="cta-button">Get Started Today</a>
+        <p>You're just one call away from making your brand the talk of the town.</p>
+    </section>
+
+    <!-- Marquee of Brands Section -->
+    <section class="marquee-section">
+        <h2>Brands We've Worked With</h2>
+        <div class="marquee-content">
+            <!-- Replace these placeholder images with actual brand logos -->
+            <img src="https://via.placeholder.com/150x100?text=Brand+1" alt="Brand 1">
+            <img src="https://via.placeholder.com/150x100?text=Brand+2" alt="Brand 2">
+            <img src="https://via.placeholder.com/150x100?text=Brand+3" alt="Brand 3">
+            <img src="https://via.placeholder.com/150x100?text=Brand+4" alt="Brand 4">
+            <img src="https://via.placeholder.com/150x100?text=Brand+5" alt="Brand 5">
+            <!-- Duplicate for seamless scrolling -->
+            <img src="https://via.placeholder.com/150x100?text=Brand+1" alt="Brand 1">
+            <img src="https://via.placeholder.com/150x100?text=Brand+2" alt="Brand 2">
+            <img src="https://via.placeholder.com/150x100?text=Brand+3" alt="Brand 3">
+            <img src="https://via.placeholder.com/150x100?text=Brand+4" alt="Brand 4">
+            <img src="https://via.placeholder.com/150x100?text=Brand+5" alt="Brand 5">
+        </div>
+    </section>
+
+    <!-- Our Services Section -->
+    <section class="services-section" id="services">
+        <h2>Our Services</h2>
+
+        <!-- Social Media Marketing -->
+        <div class="service">
+            <h3>Social Media Marketing</h3>
+            <p class="service-description">We create vibrant social media campaigns that get people talking and build genuine connections with your audience.</p>
+            <h4>Ready to make your social media presence shine?</h4>
+            <p>Let's chat and start creating impactful campaigns today.</p>
+        </div>
+
+        <!-- Performance Marketing -->
+        <div class="service">
+            <h3>Performance Marketing</h3>
+            <p class="service-description">With a focus on ROI, our campaigns are designed to deliver the best results at the right cost, scaling your business effectively.</p>
+            <h4>Maximise your returns with our tailored approach.</h4>
+            <p>A conversation with us could be the start of your next big campaign. Reach out now.</p>
+        </div>
+
+        <!-- SEO -->
+        <div class="service">
+            <h3>SEO</h3>
+            <p class="service-description">We help you rank higher in search engines, ensuring your customers find you when they need you the most.</p>
+            <h4>Ready to climb the search engine ranks?</h4>
+            <p>Boost your visibility effortlessly. Connect with us for more details.</p>
+        </div>
+
+        <!-- Branding -->
+        <div class="service">
+            <h3>Branding</h3>
+            <p class="service-description">Your brand is your identity. We make sure it's memorable, resonant, and speaks directly to your audience.</p>
+            <h4>Create a brand that stands out.</h4>
+            <p>Let's make your brand unforgettable. One call is all it takes.</p>
+        </div>
+
+        <!-- Public Relations -->
+        <div class="service">
+            <h3>Public Relations</h3>
+            <p class="service-description">Get your brand the attention it deserves. Our PR strategies ensure your story reaches the right ears and leaves a lasting impact.</p>
+            <h4>Tell your story the right way.</h4>
+            <p>Impactful PR is just a phone call away. Let's tell your story together.</p>
+        </div>
+    </section>
+
+    <!-- Why Choose Medley Lab Section -->
+    <section class="why-section">
+        <h2>Why Choose Medley Lab</h2>
+        <p>At Medley Lab, we believe that creativity is key, but strategy is crucial. We combine our innovative ideas with solid, data-backed strategies to make sure your marketing campaigns aren’t just eye-catching but also effective.</p>
+        <a href="#contact" class="cta-button">Partner with Us</a>
+        <p>Want to bring your vision to life? We're just one phone call away.</p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Medley Lab. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
